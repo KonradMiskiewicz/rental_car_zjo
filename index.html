@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script src ="JS/Zegar.js" ></script> <!-- Vallenrod -->
+	<meta charset="utf-8">
+	
+
+	<link rel="stylesheet" href="_css/main_style.css">
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+	<script src="JS/kalendarz.js"</script> <!-- Vallenrod -->
+	<script src="JS/kalendarz2.js"</script><!-- Vallenrod -->
+	<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+	<script src ="JS/wickedpicker.js"></script>
+	
+	<script><!-- Vallenrod -->
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+  	<script>
+  $( function() {
+    $( "#datepicker2" ).datepicker();
+  } );
+  </script>
+  <script>
+  $( function(){
+$("#timepicker").wickedpicker();
+
+  });
+  </script><!-- Vallenrod -->
+  <script>
+   $(function() {
+    $('#datetimepicker3').datetimepicker({
+      pickDate: false
+    });
+  });
+  
+  </script>
+  <script>
+  $(document).ready(function() {
+	$("#x").click(function() {
+		alert("Value: " + $("#x2").val());
+	});
+});
+</script>
+<script>
+function myFunction()
+{
+var c = parseInt(document.getElementById('lolz').value);
+c =c+1;
+if(c==3)
+{
+return;
+}
+document.getElementById('lolz').value = c;
+}
+</script>
+	</head>
+<body onload="startTime()">
+
+	<div id="center">
+	<div id = "zegar">
+	</div>
+		<div id="header">
+			<img src="_images/logo_slim.png" width="300" height="123">
+		</div>
+		<div id="nav">
+			<ul>
+				<li><a href="#oferta">Oferta</a></li>
+				<li><a href="#news">Promocje</a></li>
+				<li><a href="#contact">Flota</a></li>
+				<li><a href="#about">O firmie</a></li>
+				<li><a href="#about">Kontakt</a></li>
+			</ul>
+		</div>
+		<div id="banner">
+			<img src="_images/car-rental-1.jpg" width="1000">
+		</div>
+		<div id="content">
+			<div id="wynajem">
+				<p class="tytul_zakladki">Wynajem:</p>
+				<div id="zakladka">
+				</div>
+				<form action="">
+				<p class="odbior">Odbiór:</p>
+				<input class="mo" type="text" name="miejsce_odbioru" value="Miejsce odbioru"> 
+				<input class="do" type="text" id ="datepicker" name="dzien_odbioru" value="10 MARZEC"><!-- Vallenrod -->
+				
+				<input class="go" type="text" name="godzina_odbioru"><!-- Vallenrod -->
+				
+				<p class="zwrot">Zwrot:</p>
+				<input class="mo" type="text" name="miejsce_zwrotu" value="Miejsce zwrotu">
+				<input class="do" type="text" id ="datepicker2" name="dzien_zwrotu" value="11 MARZEC">
+				<input class="ka"  id = "kk" type="button" name="godzinka" value = "click" onclick="myFunction()">
+				<input class="ka1" type="button" name="godzinka" value = "">
+				<input class="ka2" type="button" name="godzinka" value = "">
+				<input class="ka3" type="button" name="godzinka" value = "">
+				<div id="zegar"><!-- Vallenrod -->
+				<input class="go" id = "lolz" type="text" name="godzina_zwrotu" value="0">
+				</div>
+				<input class="so" type="submit" value="SPRAWDŹ OFERTĘ >">
+				
+				</form> 
+			</div>
+			<div id="right_info">
+			<p>Nowe auta bez limitu kilometrów</p>
+			<p>Poznaj nasze auta</p>
+			<p>Opłać wynajem online</p>
+			<p>Sprawdź ile zaoszczędziłeś</p>
+			<p>31 oddziałów w Polsce</p>
+			<p>Znajdź swoje miasto</p>
+			</div>
+		</div>
+		<div id="footer">
+		
+		
+		</div>
+	</div>
+</body>
+</html>
